@@ -108,15 +108,15 @@ function keyPressed(){
 }
 
 async function getBackgroundImage(){
-    var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
-    var responseJSON = await response.json();
-    var dateTime = responseJSON.datetime
-    var hour = dateTime.slice(11,15);
-    if(hour>=06&&hour<=18){
+    //var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
+    //var responseJSON = await response.json();
+    //var dateTime = responseJSON.datetime
+    //var hour = dateTime.slice(11,15);
+    //if(hour>=06&&hour<=18){
         bg = "sprites/bg.png";
-    }
-    else{
-        bg = "sprites/bg2.jpg"
-    }
+    //}
+    //else{
+    //    bg = "sprites/bg2.jpg"
+    //}
     backgroundImg = loadImage(bg);
 }
