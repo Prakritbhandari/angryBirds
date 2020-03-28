@@ -12,12 +12,13 @@ var bird1;
 
 var gameState = "onSling";
 
-var bg = "sprites/bg.png";
-
 var score = 0;
 
+var bg
+
 function preload() {
-    getBackgroundImage();
+  bg = loadImage("sprites/bg.png");
+
 }
 
 function setup(){
@@ -52,8 +53,7 @@ function setup(){
 }
 
 function draw(){
-    if(backgroundImg)
-    background(backgroundImg);
+    background(bg);
 
     noStroke();
     textSize(35);
@@ -107,16 +107,16 @@ function keyPressed(){
     }
 }
 
-async function getBackgroundImage(){
+//async function getBackgroundImage(){
     //var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
     //var responseJSON = await response.json();
     //var dateTime = responseJSON.datetime
     //var hour = dateTime.slice(11,15);
     //if(hour>=06&&hour<=18){
-        bg = "sprites/bg.png";
+        //bg = "sprites/bg.png";
     //}
     //else{
     //    bg = "sprites/bg2.jpg"
     //}
-    backgroundImg = loadImage(bg);
-}
+    //backgroundImg = loadImage(bg);
+//}
